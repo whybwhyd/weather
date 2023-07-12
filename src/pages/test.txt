@@ -1,0 +1,38 @@
+// var xhr = new XMLHttpRequest();
+// var url = 'http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst'; /*URL*/
+// var servicekey='x%2FXpc09p%2FvgDrycxkvqYXvPZLZnLozRj9kwb6DH1lAFMPcTVsswJVFXNMyV5wdBWq7qZCkCQnAX%2BBvDLp3xCCg%3D%3D'
+// var queryParams = '?' + encodeURIComponent('serviceKey') + '='+servicekey; /*Service Key*/
+// queryParams += '&' + encodeURIComponent('pageNo') + '=' + encodeURIComponent('1'); /**/
+// queryParams += '&' + encodeURIComponent('numOfRows') + '=' + encodeURIComponent('1000'); /**/
+// queryParams += '&' + encodeURIComponent('dataType') + '=' + encodeURIComponent('XML'); /**/
+// queryParams += '&' + encodeURIComponent('base_date') + '=' + encodeURIComponent('20230710'); /**/
+// queryParams += '&' + encodeURIComponent('base_time') + '=' + encodeURIComponent('0500'); /**/
+// queryParams += '&' + encodeURIComponent('nx') + '=' + encodeURIComponent('55'); /**/
+// queryParams += '&' + encodeURIComponent('ny') + '=' + encodeURIComponent('127'); /**/
+// xhr.open('GET', url + queryParams);
+// xhr.onreadystatechange = function () {
+//     if (this.readyState == 4) {
+//         alert('Status: '+this.status+'nHeaders: '+JSON.stringify(this.getAllResponseHeaders())+'nBody: '+this.responseText);
+//     }
+// };
+
+// xhr.send('');
+
+위치
+서울 60,127
+인천 55, 124
+수원(경기도) 60, 121
+춘천(강원도) 73,134
+강릉(강원도)92,131
+청주(충청북도) 69,106
+대전 (충청남도)67,100
+전주(전라북도)63,89
+광주 (전라남도)58,74
+목포(전라남도)51,67
+여수(전라남도)73,66
+부산98,76
+창원 (경상남도)91,77
+울릉도/독도(경상북도)127,127
+안동(경상북도)91,106
+제주도 52,38
+
