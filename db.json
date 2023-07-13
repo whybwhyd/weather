@@ -1,0 +1,16 @@
+{
+  "weathers": [
+    {
+      "id": 2,
+      "createdBy": "야옹",
+      "title": "이게 ",
+      "content": "맞아?"
+    },
+    {
+      "id": 7,
+      "createdBy": "익명의 작성자",
+      "title": "날씨가 ",
+      "content": "덥네요"
+    }
+  ]
+}

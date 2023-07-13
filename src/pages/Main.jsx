@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import * as M from '../style/MainStyled';
 import MainPhoto from '../images/MainPhoto.png';
 import { Weather } from './Weather';
 import { Clothes } from './Clothes';
 import axios from 'axios';
+import { WeatherTalk } from './WeatherTalk';
 
 function Main() {
   const [isLoading, setIsLoading] = useState(true);
@@ -24,8 +26,6 @@ function Main() {
             ? `${todayYear}0${todayMonth}${todayDate - 1}`
             : `${todayYear}0${todayMonth}${todayDate}`;
         const minutes = now.getMinutes();
-        // const weatherHour = hours >= 10 ? `${hours}` : `0${hours}`;
-        // const weatherMinutes = minutes >= 10 ? `${minutes}` : `0${minutes}`;
         const BaseTime = (() => {
           const weatherTime = `${now
             .getHours()
@@ -89,7 +89,7 @@ function Main() {
               <M.BoxTitleCircle>● </M.BoxTitleCircle>오늘 날씨
               <M.BoxTitleCircle> ●</M.BoxTitleCircle>
             </M.BoxTitle>
-            <M.Box>
+            <M.Box1>
               {isLoading ? (
                 <div className="loader">
                   <span className="loader_text">Loading...</span>
@@ -105,14 +105,14 @@ function Main() {
                   />
                 </div>
               )}
-            </M.Box>
+            </M.Box1>
           </div>
           <div>
             <M.BoxTitle>
               <M.BoxTitleCircle>● </M.BoxTitleCircle>옷차림 추천
               <M.BoxTitleCircle> ●</M.BoxTitleCircle>
             </M.BoxTitle>
-            <M.Box>
+            <M.Box2>
               {isLoading ? (
                 <div className="loader">
                   <span className="loader_text">Loading...</span>
@@ -122,21 +122,45 @@ function Main() {
                   <Clothes TMP={data[0].fcstValue} />
                 </div>
               )}
-            </M.Box>
+            </M.Box2>
           </div>
           <div>
             <M.BoxTitle>
               <M.BoxTitleCircle>● </M.BoxTitleCircle>날씨 현황 talk
               <M.BoxTitleCircle> ●</M.BoxTitleCircle>
             </M.BoxTitle>
-            <M.Box>날씨 현황 talk</M.Box>
+            <M.Box3>
+              {isLoading ? (
+                <div className="loader">
+                  <span className="loader_text">Loading...</span>
+                </div>
+              ) : (
+                <div>
+                  <M.GridB>
+                    <M.Region>서울 {data[0].fcstValue}℃</M.Region>
+                    <div>
+                      <Link
+                        to="/WeatherTalkGroup"
+                        style={{ textDecoration: 'none' }}
+                        // state={{TMP:`${data[0].fcstValue}`}}
+                      >
+                        <M.Plus>더보기</M.Plus>
+                      </Link>
+                    </div>
+                  </M.GridB>
+                  <div className="weatherInfo">
+                    <WeatherTalk TMP={data[0].fcstValue} />
+                  </div>
+                </div>
+              )}
+            </M.Box3>
           </div>
           <div>
             <M.BoxTitle>
               <M.BoxTitleCircle>● </M.BoxTitleCircle>오늘의 ootd
               <M.BoxTitleCircle> ●</M.BoxTitleCircle>
             </M.BoxTitle>
-            <M.Box>오늘의 ootd</M.Box>
+            <M.Box4>오늘의 ootd</M.Box4>
           </div>
         </M.Section>
       </M.Layer>

@@ -58,14 +58,56 @@ export const BoxTitleCircle = styled.span`
   font-size: 1px;
 `;
 
-export const Box = styled.section`
+export const Box1 = styled.section`
   border: 3px solid #a4bcdf;
   border-radius: 20px;
   width: 650px;
   margin: 0px 10px 20px 0px;
   display: grid;
   justify-content: center;
-  align-self: center;
+  padding-top: 10px;
+  padding-bottom: 30px;
+`;
+export const Box2 = styled.section`
+  border: 3px solid #a4bcdf;
+  border-radius: 20px;
+  width: 650px;
+  margin: 0px 10px 20px 0px;
+  display: grid;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 30px;
+`;
+export const Box3 = styled.section`
+  border: 3px solid #a4bcdf;
+  border-radius: 20px;
+  width: 650px;
+  height:220px;
+  margin: 0px 10px 20px 0px;
+  display: grid;
+  padding-top: 10px;
+  padding-bottom: 30px;
+`;
+export const Plus = styled.div`
+  transform: translate(-25px, 5px);
+  font-weight: bold;
+  color: black;
+`;
+export const GridB = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+export const Region = styled.div`
+  transform: translate(25px, 5px);
+  font-weight: bold;
+`;
+export const Box4 = styled.section`
+  border: 3px solid #a4bcdf;
+  border-radius: 20px;
+  width: 650px;
+  margin: 0px 10px 20px 0px;
+  display: grid;
+  justify-content: center;
   padding-top: 10px;
   padding-bottom: 30px;
 `;

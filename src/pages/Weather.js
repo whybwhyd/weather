@@ -8,6 +8,7 @@ export const Weather = ({ TMP, POP, REH, SKY, WSD }) => {
   return (
     <div>
       <div>
+        {/* 마무리할때 지역별 넣기, 날짜 넣기,비올때 우산넣기 */}
         <W.WeatherImg>
           {POP < 50 && SKY <= 5 && <img src={Sun} alt="맑음" />}
           {SKY >= 6 && SKY < 8 && <img src={Cloud} alt="구름 많음" />}
@@ -21,3 +22,4 @@ export const Weather = ({ TMP, POP, REH, SKY, WSD }) => {
     </div>
   );
 };
+export default Weather;

@@ -19,11 +19,7 @@ export const Message = styled.div`
   font-weight: 900;
   transform: translate(0px, -10px);
 `;
-export const Plus = styled.div`
-  transform: translate(270px, -35px);
-  font-weight: bold;
-  color: black;
-`;
+
 export const ImgTitle = styled.div`
   transform: translate(8px, 10px);
   font-weight: 500;

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import * as C from '../style/ClothesStyled';
 import Clothes28Img from '../images/Clothes28Img.jpg';
 import Clothes2327Img from '../images/Clothes2327Img.jpg';
@@ -11,6 +10,7 @@ import Clothes58Img from '../images/Clothes58Img.jpg';
 import Clothes4Img from '../images/Clothes4Img.jpg';
 
 export const Clothes = ({ TMP }) => {
+  // 시간 남으면,,,실시간 온도에 속하는 온도 구간 보여주기
   return (
     <div>
       <C.Grid>
@@ -25,24 +25,17 @@ export const Clothes = ({ TMP }) => {
           {TMP >= 5 && TMP <= 8 && '가죽자켓의 계절이 돌아왔네요!'}
           {TMP <= 4 && '롱패딩 없이는 못 살지만, 도전도 좋아요.'}"
         </C.Message>
-        <Link to="/WeatherTalk" style={{ textDecoration: 'none' }}>
-          <C.Plus>더보기</C.Plus>
-        </Link>
         <div>
           {TMP >= 28 && <C.ClothesImg src={Clothes28Img} alt="28도 옷사진" />}
-
           {TMP >= 23 && TMP <= 27 && (
             <C.ClothesImg src={Clothes2327Img} alt="23~27도 옷사진" />
           )}
-
           {TMP >= 20 && TMP <= 22 && (
             <C.ClothesImg src={Clothes2022Img} alt="20~22도 옷사진" />
           )}
-
           {TMP >= 17 && TMP <= 19 && (
             <C.ClothesImg src={Clothes1719Img} alt="17~19도 옷사진" />
           )}
-
           {TMP >= 12 && TMP <= 16 && (
             <C.ClothesImg src={Clothes1216Img} alt="12~16도 옷사진" />
           )}
@@ -50,7 +43,6 @@ export const Clothes = ({ TMP }) => {
           {TMP >= 9 && TMP <= 11 && (
             <C.ClothesImg src={Clothes911Img} alt="9~11도 옷사진" />
           )}
-
           {TMP >= 5 && TMP <= 8 && (
             <C.ClothesImg src={Clothes58Img} alt="5~8도 옷사진" />
           )}
@@ -75,3 +67,4 @@ export const Clothes = ({ TMP }) => {
     </div>
   );
 };
+export default Clothes;
