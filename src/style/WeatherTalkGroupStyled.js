@@ -59,7 +59,7 @@ export const Contents = styled.p`
 export const WriteButton = styled.button`
   position:fixed;
   bottom:50px;
-  left:45%;
+  left:42%;
   background-color: #5595F1;
   border-radius:30px;
   width:200px;

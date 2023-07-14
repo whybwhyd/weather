@@ -1,6 +1,6 @@
 import React from 'react';
-import * as T from '../style/WeatherTalkStyled';
-import profileDefault from '../images/WeatherTalk/profileDefault.png';
+import * as T from '../../style/WeatherTalkStyled';
+import profileDefault from '../../images/WeatherTalk/profileDefault.png';
 
 export const WeatherTalk = () => {
   return (

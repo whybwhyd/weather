@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from '../pages/Home';
 import Main from '../pages/Main';
 import SignUp from '../pages/SignUp';
-import WeatherTalk from '../pages/WeatherTalk';
+import WeatherTalk from '../components/mainComponent/WeatherTalk';
 import WeatherTalkGroup from '../pages/WeatherTalkGroup';
 import TalkMake from '../pages/TalkMake';
 import WeatherDetail from '../pages/WeatherDetail';

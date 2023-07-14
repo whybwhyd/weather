@@ -1,13 +1,13 @@
 import React from 'react';
-import * as C from '../style/ClothesStyled';
-import Clothes28Img from '../images/Clothes28Img.jpg';
-import Clothes2327Img from '../images/Clothes2327Img.jpg';
-import Clothes2022Img from '../images/Clothes2022Img.jpg';
-import Clothes1719Img from '../images/Clothes1719Img.jpg';
-import Clothes1216Img from '../images/Clothes1216Img.jpg';
-import Clothes911Img from '../images/Clothes911Img.jpg';
-import Clothes58Img from '../images/Clothes58Img.jpg';
-import Clothes4Img from '../images/Clothes4Img.jpg';
+import * as C from '../../style/ClothesStyled';
+import Clothes28Img from '../../images/Clothes/Clothes28Img.jpg';
+import Clothes2327Img from '../../images/Clothes/Clothes2327Img.jpg';
+import Clothes2022Img from '../../images/Clothes/Clothes2022Img.jpg';
+import Clothes1719Img from '../../images/Clothes/Clothes1719Img.jpg';
+import Clothes1216Img from '../../images/Clothes/Clothes1216Img.jpg';
+import Clothes911Img from '../../images/Clothes/Clothes911Img.jpg';
+import Clothes58Img from '../../images/Clothes/Clothes58Img.jpg';
+import Clothes4Img from '../../images/Clothes/Clothes4Img.jpg';
 
 export const Clothes = ({ TMP }) => {
   // 시간 남으면,,,실시간 온도에 속하는 온도 구간 보여주기

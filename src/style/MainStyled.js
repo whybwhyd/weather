@@ -123,3 +123,6 @@ export const Footer = styled.footer`
   padding: 10px;
   margin-top: 60px;
 `;
+export const Area = styled.div`
+  transform: translate(400px, 0px);
+`;
