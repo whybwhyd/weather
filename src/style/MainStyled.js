@@ -82,7 +82,7 @@ export const Box3 = styled.section`
   border: 3px solid #a4bcdf;
   border-radius: 20px;
   width: 650px;
-  height:220px;
+  height: 220px;
   margin: 0px 10px 20px 0px;
   display: grid;
   padding-top: 10px;
@@ -105,14 +105,20 @@ export const Box4 = styled.section`
   border: 3px solid #a4bcdf;
   border-radius: 20px;
   width: 650px;
+  height: 220px;
   margin: 0px 10px 20px 0px;
   display: grid;
   justify-content: center;
   padding-top: 10px;
   padding-bottom: 30px;
 `;
+export const OotdImg = styled.img`
+  transform: translate(0px, 40px);
+  width: 450px;
+`;
 export const Footer = styled.footer`
   background-color: #a4bcdf;
+  color: white;
   width: 980px;
   padding: 10px;
   margin-top: 60px;

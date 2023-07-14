@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import api from '../axios/api';
+import * as T from '../style/TalkMakeStyled';
+import SubpageHeader from '../images/SubpageHeader.png';
 import { useNavigate, useParams } from 'react-router-dom';
 function WeatherUpdate() {
   const navigate = useNavigate();
@@ -52,38 +54,52 @@ function WeatherUpdate() {
 
   return (
     <div>
+      <T.GlobalStyles />
+      <header>
+      <T.SubpageHeaderImg src={SubpageHeader} alt="header 사진" />
+    </header>
+    <T.BfButton
+        onClick={() => {
+          navigate('/weatherTalkGroup/' + id);
+        }}
+      >
+        &lt; 이전페이지
+      </T.BfButton>
+      <T.Grid>
+        <T.WriteBox>
       <div>
         <div>
-          <span>제목</span>
-          <input type="text" name="title" value={title} onChange={onChange} />
+          <T.InputTitle type="text" name="title" value={title} onChange={onChange} />
         </div>
         <br />
+        <br /><br /><br />
         <div>
-          <span>작성자</span>
-          <input
+          <T.InputCreatedBy
             type="text"
             name="createdBy"
             value={createdBy}
             readOnly={true}
           />
         </div>
-        <br />
+        <br /><br /><br /><br />
         <div>
-          <span>내용</span>
-          <textarea
+          <T.Textarea
             name="content"
             cols="30"
             rows="10"
             value={content}
             onChange={onChange}
-          ></textarea>
+          ></T.Textarea>
         </div>
         <br />
-        <div>
-          <button onClick={updateItem}>수정</button>
-          <button onClick={backToDetail}>취소</button>
-        </div>
       </div>
+      </T.WriteBox>
+      <br />
+      <div>
+          <T.Button onClick={updateItem}>수정</T.Button>
+          <T.Button onClick={backToDetail}>취소</T.Button>
+        </div>
+      </T.Grid>
     </div>
   );
 }

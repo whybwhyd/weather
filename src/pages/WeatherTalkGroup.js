@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import * as G from '../style/WeatherTalkGroupStyled';
 import api from '../axios/api';
 import profileDefault from '../images/WeatherTalk/profileDefault.png';
+import SubpageHeader from '../images/SubpageHeader.png';
 import { useNavigate } from 'react-router-dom';
 
 export const WeatherTalkGroup = () => {
@@ -30,21 +31,24 @@ export const WeatherTalkGroup = () => {
 
   return (
     <div>
-      <button
+      <header>
+        <G.SubpageHeaderImg src={SubpageHeader} alt="header 사진" />
+      </header>
+      <G.Button
         onClick={() => {
           navigate('/main');
         }}
       >
-        이전페이지
-      </button>
+        &lt; 이전페이지
+      </G.Button>
       <G.Grid>
         <G.GlobalStyles />
         {weathers.map((item) => (
           <div key={item.id}>
             <G.Content>
-              <G.Button onClick={() => onDeleteButtonClickHandler(item.id)}>
+              <G.XButton onClick={() => onDeleteButtonClickHandler(item.id)}>
                 X
-              </G.Button>
+              </G.XButton>
 
               <Link
                 to={`/weatherTalkGroup/${item.id}`}
@@ -67,13 +71,13 @@ export const WeatherTalkGroup = () => {
           </div>
         ))}
         {/* 글 작성 칸으로 이동 */}
-        <button
+        <G.WriteButton
           onClick={() => {
             navigate('/TalkMake');
           }}
         >
           글 작성하기
-        </button>
+        </G.WriteButton>
       </G.Grid>
     </div>
   );

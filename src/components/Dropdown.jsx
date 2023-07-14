@@ -1,13 +1,13 @@
+import * as G from '../style/WeatherTalkGroupStyled';
+function Dropdown({ onDeleteButtonClickHandler, moveToUpdate }) {
+  return (
+    <>
+    <br/>
+      <G.DropButton onClick={onDeleteButtonClickHandler}>삭제</G.DropButton>
+      <br/>
+      <G.DropButton onClick={moveToUpdate}>수정</G.DropButton>
+    </>
+  );
+}
 
-function Dropdown({onDeleteButtonClickHandler,id,setWeathers}) {
-
-
-    return (
-      <>
-        <li><button onClick={() => onDeleteButtonClickHandler(id)}>삭제</button></li>
-        <li><button>수정</button></li>
-      </>
-    );
-  }
-  
-  export default Dropdown;
+export default Dropdown;

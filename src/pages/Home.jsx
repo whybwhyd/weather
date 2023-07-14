@@ -1,5 +1,5 @@
 import React from 'react';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import * as H from '../style/HomeStyled';
 
 function Home() {
@@ -9,20 +9,20 @@ function Home() {
       <H.GlobalStyles />
       <div>
         <form>
-          <H.Button
+          <H.SButton
             onClick={() => {
               navigate('/signUp');
             }}
           >
             SIGNUP
-          </H.Button>
-          <H.Button
+          </H.SButton>
+          <H.MButton
             onClick={() => {
               navigate('/main');
             }}
           >
             LOGIN
-          </H.Button>
+          </H.MButton>
         </form>
       </div>
     </div>

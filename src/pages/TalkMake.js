@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import SubpageHeader from '../images/SubpageHeader.png';
 import api from '../axios/api';
 import * as T from '../style/TalkMakeStyled';
 import { useNavigate } from 'react-router-dom';
@@ -35,17 +36,26 @@ function TalkMake() {
   return (
     <div>
       <T.GlobalStyles />
+      <header>
+      <T.SubpageHeaderImg src={SubpageHeader} alt="header 사진" />
+    </header>
+    <T.BfButton
+        onClick={() => {
+          navigate('/weatherTalkGroup');
+        }}
+      >
+        &lt; 이전페이지
+      </T.BfButton>
       <T.Grid>
         <T.WriteBox>
         <div>
-        <span>제목</span>
-        <input type="text" name="title" value={title} onChange={onChange} />
+        <T.InputTitle type="text" name="title" placeholder="제목" value={title} onChange={onChange} />
       </div>
       <br />
       <div>
-        <span>작성자</span>
-        <input
+        <T.InputCreatedBy
           type="text"
+          placeholder="작성자"
           name="createdBy"
           value={createdBy}
           onChange={onChange}
@@ -53,21 +63,21 @@ function TalkMake() {
       </div>
       <br />
       <div>
-        <span>내용</span>
-        <textarea
+        <T.Textarea
           name="content"
           cols="30"
           rows="10"
+          placeholder="내용을 입력해주세요"
           value={content}
           onChange={onChange}
-        ></textarea>
-      </div>
-      <br />
-      <div>
-        <button onClick={saveItem}>저장</button>
-        <button onClick={moveToTalk}>취소</button>
+        ></T.Textarea>
       </div>
         </T.WriteBox>
+        <br /><br />
+        <div>
+        <T.Button onClick={saveItem}>저장</T.Button>
+        <T.Button onClick={moveToTalk}>취소</T.Button>
+      </div>
       </T.Grid>
     </div>
   );

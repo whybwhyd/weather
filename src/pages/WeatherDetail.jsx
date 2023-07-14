@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import * as D from '../style/WeatherDetailStyled';
 import api from '../axios/api';
 import Detail from '../components/Detail';
+import SubpageHeader from '../images/SubpageHeader.png';
+import { useNavigate } from 'react-router-dom';
 
 const WeatherDetail = () => {
+  const navigate = useNavigate();
   const { id } = useParams();
   const [loading, setLoading] = useState(true);
   const [item, setItem] = useState({});
@@ -30,16 +34,31 @@ const WeatherDetail = () => {
 
   return (
     <div>
-      {loading ? (
-        <h2>loading...</h2>
-      ) : (
-        <Detail
-          id={item.id}
-          title={item.title}
-          contents={item.content}
-          createdBy={item.createdBy}
-        />
-      )}
+      <header>
+      <D.SubpageHeaderImg src={SubpageHeader} alt="header 사진" />
+    </header>
+      <D.BfButton
+        onClick={() => {
+          navigate('/weatherTalkGroup');
+        }}
+      >
+        &lt; 이전페이지
+      </D.BfButton>
+      <D.Grid>
+        <D.GlobalStyles />
+        <D.Content>
+          {loading ? (
+            <h2>loading...</h2>
+          ) : (
+            <Detail
+              id={item.id}
+              title={item.title}
+              contents={item.content}
+              createdBy={item.createdBy}
+            />
+          )}
+        </D.Content>
+      </D.Grid>
     </div>
   );
 };

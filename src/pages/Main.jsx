@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import * as M from '../style/MainStyled';
 import MainPhoto from '../images/MainPhoto.png';
+import Ootd from '../images/Ootd.png';
 import { Weather } from './Weather';
 import { Clothes } from './Clothes';
 import axios from 'axios';
@@ -65,7 +66,9 @@ function Main() {
   return (
     <M.Grid>
       <M.Header>
+        <Link to="/">
         <M.HeaderImg src={MainPhoto} alt="header 사진" />
+        </Link>
       </M.Header>
       <M.Layer>
         {/* Nav 다 만들고 컴포넌트로 빼기 */}
@@ -142,7 +145,6 @@ function Main() {
                       <Link
                         to="/WeatherTalkGroup"
                         style={{ textDecoration: 'none' }}
-                        // state={{TMP:`${data[0].fcstValue}`}}
                       >
                         <M.Plus>더보기</M.Plus>
                       </Link>
@@ -160,7 +162,9 @@ function Main() {
               <M.BoxTitleCircle>● </M.BoxTitleCircle>오늘의 ootd
               <M.BoxTitleCircle> ●</M.BoxTitleCircle>
             </M.BoxTitle>
-            <M.Box4>오늘의 ootd</M.Box4>
+            <M.Box4>
+              <M.OotdImg src={Ootd} alt="ootd 사진" />
+            </M.Box4>
           </div>
         </M.Section>
       </M.Layer>
